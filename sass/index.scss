@@ -5,10 +5,13 @@ $localisation-color: #EAEAEA;
 $shadow-badge: 0 4px 4px rgba(0, 0, 0, 0.25);
 $grey: #353535;
 $purple: #9356DC;
+$green: #99E2D0;
+$green-font: #008766;
+
 $btn-bg: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 
 @mixin button{
-    display: inline-block;
+    display: block;
     border: none;
     border-radius: 30px;
     padding: 20px 30px;
@@ -28,7 +31,7 @@ $btn-bg: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 
 body{
     font-family: $text-font;
-    color: $grey;
+    color: black;
 }
 
 .header{
@@ -56,6 +59,7 @@ body{
         background-color: $localisation-color;
         box-shadow: $shadow-badge;
         font-weight: 500;
+        color: $grey;
     }
 }
 
@@ -78,6 +82,7 @@ body{
     &__subtitle{
         font-family: $text-font;
         font-size: 1.1rem;
+        color: $grey;
     }
     &__button{
         @include button;
@@ -89,7 +94,7 @@ body{
     text-align: left;
     color: black;
     &__title{
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-bottom: 30px;
     }
     &__content{
@@ -112,6 +117,9 @@ body{
 
         .fa-solid {
             color: #7e7e7e;
+            &.fa-store {
+                color: $purple;
+            }
         }
     }
     &__number{
@@ -125,6 +133,70 @@ body{
         border-radius: 30px;
         width: 24px;
         height: 24px;
+    }
+}
+
+.restaurants{
+    padding: 40px 25px;
+    text-align: left;
+    background-color: $bg-color;
+    &__container{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__card{
+        position: relative;
+        width: 340px;
+        height: 251px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        background-color: white;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        &__img{
+            width: 100%;
+            height: 150px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            object-fit: cover;
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            .fa-heart {
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        &__title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        &__subtitle {
+            font-size: 1rem;
+        }
+        &__new{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: $green;
+            color: $green-font;
+            padding: 7px 12px;
+            border-radius: 2px;
+            font-weight: 500;
+        }
     }
 }
 
