@@ -4,6 +4,7 @@ $bg-color: #f6f6f6;
 $localisation-color: #EAEAEA;
 $shadow-badge: 0 4px 4px rgba(0, 0, 0, 0.25);
 $grey: #353535;
+$purple: #9356DC;
 $btn-bg: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 
 @mixin button{
@@ -60,7 +61,7 @@ body{
 
 .hero{
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,6 +81,50 @@ body{
     }
     &__button{
         @include button;
+    }
+}
+
+.fonctionnement{
+    padding: 50px 25px;
+    text-align: left;
+    color: black;
+    &__title{
+        font-size: 2rem;
+        padding-bottom: 30px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        background-color: $bg-color;
+        width: 322px;
+        height: 72px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+        .fa-solid {
+            color: #7e7e7e;
+        }
+    }
+    &__number{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 10px;
+        background-color: $purple;
+        color: white;
+        border-radius: 30px;
+        width: 24px;
+        height: 24px;
     }
 }
 
