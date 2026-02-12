@@ -193,6 +193,7 @@ body {
   background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%) no-repeat center;
   background-size: 0% 0%;
   -webkit-background-clip: text;
+          background-clip: text;
   transition: background-size 0.4s ease-in-out, -webkit-text-stroke 0.4s ease-in-out;
 }
 .restaurants__card {
@@ -215,7 +216,8 @@ body {
   height: 180px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurants__card__content {
   display: flex;
@@ -294,6 +296,4 @@ body {
     flex-direction: row;
     gap: 20px;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

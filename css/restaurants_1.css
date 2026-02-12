@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+body a {
+  color: black;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  padding: 20px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  width: 100%;
+}
+.header__logo img {
+  width: 162px;
+}
+.header__logo a {
+  position: relative;
+  right: 75px;
+}
+.header__localisation {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    box-shadow: none;
+  }
+  .header__logo img {
+    width: 200px;
+  }
+  .header__localisation {
+    display: block;
+    box-shadow: none;
+  }
+}/*# sourceMappingURL=restaurants_1.css.map */
