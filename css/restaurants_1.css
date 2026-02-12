@@ -49,4 +49,10 @@ body a {
     display: block;
     box-shadow: none;
   }
+}
+
+.hero-banner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }/*# sourceMappingURL=restaurants_1.css.map */
