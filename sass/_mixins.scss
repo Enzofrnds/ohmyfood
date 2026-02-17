@@ -37,3 +37,41 @@
         }
     }
 }
+
+@mixin footer {
+    padding: 20px 25px;
+    background-color: $grey;
+    color: white;
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__logo {
+        filter: invert(100%);
+        width: 139px;
+        margin-bottom: 20px;
+    }
+    &__link{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: white;
+        i {
+            width: 20px;
+        }
+    }
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
