@@ -108,6 +108,7 @@ body a {
   margin-bottom: 30px;
 }
 .menu__content h3 {
+  align-self: flex-start;
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 5px;
