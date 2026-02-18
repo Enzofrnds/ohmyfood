@@ -84,7 +84,7 @@ body a {
   display: none;
 }
 .menu__heart .heart-checkbox:checked + label .fa-heart {
-  background-size: 200% 200%;
+  background-size: 100% 100%;
   -webkit-text-stroke: 1px transparent;
 }
 .menu__heart label {
@@ -98,7 +98,7 @@ body a {
   background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%) no-repeat center;
   background-size: 0% 0%;
   background-clip: text;
-  transition: background-size 0.4s ease-in-out, -webkit-text-stroke 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .menu__content {
   display: flex;
