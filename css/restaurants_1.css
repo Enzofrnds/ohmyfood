@@ -147,6 +147,38 @@ body a {
   overflow: hidden;
   cursor: pointer;
   user-select: none;
+  animation: itemAppear 0.5s ease-in-out both;
+  opacity: 0;
+}
+.menu__item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.menu__item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.menu__item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.menu__item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.menu__item:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.menu__item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.menu__item:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.menu__item:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.menu__item:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.menu__item:nth-child(11) {
+  animation-delay: 1s;
 }
 .menu__item__checkbox {
   display: none;
@@ -173,11 +205,13 @@ body a {
 .menu__item__content__title {
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.2;
+  display: block;
+}
+.menu__item__content__title span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-width: 0;
-  line-height: 1.2;
   display: block;
 }
 .menu__item__text {
@@ -240,6 +274,16 @@ body a {
   margin: 20px auto;
 }
 
+@keyframes itemAppear {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .footer {
   padding: 20px 25px;
   background-color: #353535;

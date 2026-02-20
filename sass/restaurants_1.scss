@@ -121,6 +121,13 @@ body{
         overflow: hidden;
         cursor: pointer;
         user-select: none;
+        animation: itemAppear 0.5s ease-in-out both;
+        opacity: 0;
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i + 1}) {
+                animation-delay: #{$i * 0.1}s;
+            }
+        }
         &__checkbox{
             display: none;
             &:checked ~ .menu__item__check{
@@ -145,12 +152,14 @@ body{
             &__title{
                 font-size: 18px;
                 font-weight: 700;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                min-width: 0;
                 line-height: 1.2;
                 display: block;
+                span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
             }
         }
         &__text{
@@ -196,6 +205,17 @@ body{
         @include button;
         width: 186px;
         margin: 20px auto;
+    }
+}
+
+@keyframes itemAppear {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
