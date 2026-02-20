@@ -82,6 +82,7 @@ body {
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   color: white;
   text-decoration: none;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
@@ -174,26 +175,38 @@ body {
   position: absolute;
   right: 25px;
   bottom: 25px;
+  z-index: 10;
 }
 .restaurants .card__heart .heart-checkbox {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 .restaurants .card__heart .heart-checkbox:checked + label .fa-heart {
-  background-size: 200% 200%;
+  background-size: 150% 150%;
   -webkit-text-stroke: 1px transparent;
 }
 .restaurants .card__heart label {
   cursor: pointer;
+  display: inline-block;
 }
 .restaurants .card__heart label .fa-heart {
   font-size: 1.5rem;
   color: transparent;
   -webkit-text-stroke: 1px black;
   position: relative;
-  background: radial-gradient(circle, #FF79DA 0%, #9356DC 100%) no-repeat center;
-  background-size: 0% 0%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%) no-repeat center;
+  background-size: 0 0;
   background-clip: text;
-  transition: 0.4s ease-in-out;
+  -webkit-background-clip: text;
+  transition: all 0.4s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .card__heart label .fa-heart:hover {
+    background-size: 150% 150%;
+    -webkit-text-stroke: 1px transparent;
+  }
 }
 .restaurants__card {
   position: relative;
@@ -289,12 +302,12 @@ body {
   .footer {
     display: flex;
     flex-direction: row-reverse;
-    gap: 30px;
+    gap: 20px;
   }
   .footer nav ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
   }
 }
 
