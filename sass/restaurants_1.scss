@@ -130,14 +130,14 @@ body{
         }
         &__checkbox{
             display: none;
-            &:checked ~ .menu__item__check{
+            &:checked .menu__item__check{
                 margin-right: 0;
                 i{
                     transform: rotate(0);
                 }
             }
             &:checked ~ .menu__item__content{
-                width: calc(100% - 59px);
+                width: 59px
             }
         }
         &__content{
