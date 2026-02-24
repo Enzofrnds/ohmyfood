@@ -123,10 +123,6 @@ body{
         user-select: none;
         animation: itemAppear 0.5s ease-in-out both;
         opacity: 0;
-        @for $i from 1 through 10 {
-            &:nth-child(#{$i + 1}) {
-                animation-delay: #{$i * 0.1}s;
-            }
         }
         &__checkbox{
             display: none;
@@ -136,7 +132,7 @@ body{
                     transform: rotate(0);
                 }
             }
-            &:checked ~ .menu__item__content{
+            &:checked .menu__item__content{
                 width: 59px
             }
         }
