@@ -130,14 +130,11 @@ body{
         }
         &__checkbox{
             display: none;
-            &:checked .menu__item__check{
+            &:checked ~ .menu__item__check{
                 margin-right: 0;
                 i{
                     transform: rotate(0);
                 }
-            }
-            &:checked .menu__item__content{
-                width: 59px
             }
         }
         &__content{
@@ -148,7 +145,6 @@ body{
             flex: 1;
             min-width: 0;
             cursor: pointer;
-            transition: width 0.5s;
             &__title{
                 font-size: 18px;
                 font-weight: 700;
