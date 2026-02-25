@@ -200,13 +200,16 @@ body a {
   min-width: 0;
   cursor: pointer;
 }
-.menu__item__content__title {
+.menu__item__title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: block;
 }
-.menu__item__content__title span {
+.menu__item__title > span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -242,7 +245,6 @@ body a {
   align-items: center;
   margin-right: -59px;
   transition: all 0.5s;
-  pointer-events: none;
 }
 .menu__item__check i {
   color: white;

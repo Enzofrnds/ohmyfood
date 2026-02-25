@@ -145,17 +145,20 @@ body{
             flex: 1;
             min-width: 0;
             cursor: pointer;
-            &__title{
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 1.2;
+        }
+        &__title{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            & > span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 display: block;
-                span {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: block;
-                }
             }
         }
         &__text{
