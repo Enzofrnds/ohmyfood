@@ -153,12 +153,9 @@ body a {
   animation: itemAppear 0.5s ease-in-out both;
   opacity: 0;
   transition: all 0.3s;
-}
-.menu__item:hover .menu__item__check {
-  margin-right: 0;
-}
-.menu__item:hover .menu__item__check i {
-  transform: rotate(0);
+  position: relative;
+  /* Removed hover-based animation to avoid sticky checkmarks on mobile */
+  /* Animation is now controlled solely by the checkbox state */
 }
 .menu__item:nth-child(1) {
   animation-delay: 0s;
@@ -199,6 +196,15 @@ body a {
 .menu__item__checkbox:checked ~ .menu__item__check i {
   transform: rotate(0);
 }
+.menu__item__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
 .menu__item__content {
   display: flex;
   flex-direction: column;
@@ -207,6 +213,7 @@ body a {
   flex: 1;
   min-width: 0;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .menu__item__title {
   font-size: 18px;
@@ -235,14 +242,16 @@ body a {
   margin-left: auto;
   padding-left: 10px;
   flex-shrink: 0;
+  font-size: 14px;
 }
-.menu__item__text span:not(.prix) {
+.menu__item__text p:not(.prix) {
   font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
   min-width: 0;
+  cursor: pointer;
 }
 .menu__item__check {
   background-color: #99E2D0;
