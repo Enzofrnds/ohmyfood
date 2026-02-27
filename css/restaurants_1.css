@@ -154,8 +154,17 @@ body a {
   opacity: 0;
   transition: all 0.3s;
   position: relative;
-  /* Removed hover-based animation to avoid sticky checkmarks on mobile */
-  /* Animation is now controlled solely by the checkbox state */
+}
+@media screen and (min-width: 768px) {
+  .menu__item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  .menu__item:hover .menu__item__check {
+    margin-right: 0;
+  }
+  .menu__item:hover .menu__item__check i {
+    transform: rotate(0);
+  }
 }
 .menu__item:nth-child(1) {
   animation-delay: 0s;
