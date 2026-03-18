@@ -123,9 +123,6 @@ body{
         cursor: pointer;
         user-select: none;
         animation: itemAppear 0.5s ease-in-out both;
-        opacity: 0;
-        transition: all 0.3s;
-        position: relative;
         @media screen and (min-width: 768px) {
             &:hover {
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -141,15 +138,6 @@ body{
         @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
                 animation-delay: #{($i - 1) * 0.1}s;
-            }
-        }
-        &__checkbox{
-            display: none;
-            &:checked ~ .menu__item__check{
-                margin-right: 0;
-                i{
-                    transform: rotate(0);
-                }
             }
         }
         &__label {
@@ -169,7 +157,6 @@ body{
             flex: 1;
             min-width: 0;
             cursor: pointer;
-            transition: all 0.5s;
         }
         &__title{
             font-size: 18px;
@@ -209,6 +196,15 @@ body{
                 cursor: pointer;
             }
         }
+        &__checkbox{
+            display: none;
+            &:checked ~ .menu__item__check{
+                margin-right: 0;
+                i{
+                    transform: rotate(0);
+                }
+            }
+        }
         &__check{
             background-color: $green;
             width: 59px;
@@ -222,7 +218,7 @@ body{
                 color: white;
                 font-size: 20px;
                 transform: rotate(180deg);
-                transition: all 0.5s;
+                transition: transform 0.5s;
             }
         }
     }
